@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CONTATO</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style_home.css">
+  <link rel="stylesheet" href="style.css">  
+  <link rel="stylesheet" href="dark_mode.css">    
+  <link rel="stylesheet" href="chat_bot.css">
+  <link rel="stylesheet" href="cookie_consent.css">
+
+  <!-- Script de validação do formulário -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.querySelector("form");
+      const inputs = document.querySelectorAll(".input-padrao");
+
+      if (!form) return;
+
+      inputs.forEach((input) => {
+        input.addEventListener("blur", function () {
+          if (!this.validity.valid) {
+            this.classList.add("erro");
+          } else {
+            this.classList.remove("erro");
+          }
+        });
+      });
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        let formValido = true;
+
+        inputs.forEach((input) => {
+          if (!input.validity.valid) {
+            input.classList.add("erro");
+            formValido = false;
+          }
+        });
+
+        if (!formValido) {
+          alert("Por favor, preencha todos os campos obrigatórios corretamente.");
+          return;
+        }
+
+        const button = form.querySelector(".enviar");
+        const originalText = button.value;
+
+        button.value = "Enviando...";
+        button.disabled = true;
+
+        setTimeout(() => {
+          button.value = "Mensagem Enviada!";
+          button.classList.add("sucesso");
+
+          setTimeout(() => {
+            button.value = originalText;
+            button.disabled = false;
+            button.classList.remove("sucesso");
+            form.reset();
+          }, 2000);
+        }, 1000);
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <!-- Cabeçalho -->
+  <header>   
+    <div class="caixa">
+      <h1>
+        <img src="assets/logoBranco200x100_a.png" alt="Logo Pet Shop QUATRO PATAS" />
+      </h1>
+      <h1 class="titulo-principal">Pet Shop QUATRO PATAS</h1>
+    </div>
+  </header>
+
+  <!-- Navegação -->  
+  <nav>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="produto.html">PRODUTOS</a></li>
+      <li><a href="contato.html">CONTATO</a></li>
+      <li><a href="faq_section.html">SAC</a></li>
+      <li><a href="galeria.html">GALERIA</a></li>
+      <li><a href="blog.html">BLOG</a></li>
+      <li><a href="agendamento.html">AGENDAR</a></li>
+      <li><a href="calculadora.html">CALCULADORA</a></li>
+      <li><a href="mapa.html">LOCALIZAÇÃO</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2 class="titulo-principal-produto">Entre em Contato</h2>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+        <label for="nomesobrenome">Nome e sobrenome*</label>
+        <input type="text" id="nomesobrenome" name="nome" class="input-padrao" required placeholder="Seu nome completo" />
+
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" class="input-padrao" required placeholder="seuemail@dominio.com" />
+
+        <label for="telefone">Telefone*</label>
+        <input type="tel" id="telefone" name="telefone" class="input-padrao" required placeholder="(XX)XXXXX-XXXX" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Mensagem</legend>
+        <label for="mensagem">Como podemos ajudar?*</label>
+        <textarea cols="70" rows="8" id="mensagem" name="mensagem" class="input-padrao" required placeholder="Descreva como podemos ajudá-lo..."></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Como prefere nosso contato?</legend>
+        <label class="radio-label"><input type="radio" name="contato" value="email"> Email</label>
+        <label class="radio-label"><input type="radio" name="contato" value="telefone"> Telefone</label>
+        <label class="radio-label"><input type="radio" name="contato" value="whatsapp" checked> WhatsApp</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferência de horário</legend>
+        <label for="horario">Qual horário prefere ser atendido?</label>
+        <select id="horario" name="horario" class="input-padrao">
+          <option value="">Selecione um horário</option>
+          <option value="manha">Manhã (8h–12h)</option>
+          <option value="tarde">Tarde (12h–18h)</option>
+          <option value="noite">Noite (18h–22h)</option>
+          <option value="qualquer">Qualquer horário</option>
+        </select>
+      </fieldset>
+
+      <label class="checkbox-label">
+        <input type="checkbox" name="newsletter" value="sim">
+        Gostaria de receber nossas novidades por email?
+      </label>
+
+      <input type="submit" value="Enviar Mensagem" class="enviar">
+    </form>
+
+    <section class="informacoes-contato">
+      <h3>Outras formas de contato</h3>
+      <div class="info-grid">
+        <div class="info-item">
+          <h4>Endereço</h4>
+          <p>Rua Alterio Sordi, 832<br>Veneza - Cascavel/PR<br>CEP: 85818-155</p>
+        </div>
+        <div class="info-item">
+          <h4>Telefones</h4>
+          <p>Fixo: (45) 3222-0000<br>WhatsApp: (45) 99911-1234 <br>Email: contato@petshopquatropatas.com</p>
+        </div>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-item">
+          <h4>Endereço</h4>
+          <p>Rua Brasil, 6518<br>Centro - Cascavel/PR<br>CEP: 85805-000</p>
+        </div>
+        <div class="info-item">
+          <h4>Telefones</h4>
+          <p>Fixo: (45) 3222-1111<br>WhatsApp: (45) 99911-4321 <br>Email: contato@petshopquatropatas.com</p>
+        </div>
+      </div>
+
+      <table class="horarios">
+        <caption>Horários de Funcionamento</caption>
+        <thead>
+          <tr><th>Dia da Semana</th><th>Horário</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Segunda a Sexta</td><td>8h às 18h</td></tr>
+          <tr><td>Demais dias e horarios Plantão</td></tr>          
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <img src="assets/logoBranco200x100_a.png" alt="Logo QUATRO PATAS Pet Shop" />
+    <p class="copyright">&copy; Copyright Pet Shop QUATRO PATAS - 2025</p>
+  </footer>
+
+  <!-- Scripts -->  
+  <script src="chat_bot.js"></script>
+  <script src="analytics_setup.js"></script>
+</body>
+</html>

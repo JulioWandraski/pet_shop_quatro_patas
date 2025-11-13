@@ -1,0 +1,222 @@
+<!-- SEÇÃO FAQ - Adicionar após a div.beneficios no index.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SAC</title>
+        <link rel="stylesheet" href="reset.css" />
+        <link rel="stylesheet" href="style_home.css" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="faq_depoimentos.css" />
+        <link rel="stylesheet" href="dark_mode.css" />
+        <link rel="stylesheet" href="chat_bot.css" />
+        <link rel="stylesheet" href="cookie_consent.css" />
+    </head>
+    <body>
+        <!-- Cabeçalho -->
+        <header>
+            <div class="caixa">
+                <h1>
+                    <img
+                        src="assets/logoBranco200x100_a.png"
+                        alt="Logo Pet Shop QUATRO PATAS"
+                    />
+                </h1>
+                <h1 class="titulo-principal">Pet Shop QUATRO PATAS</h1>
+            </div>
+        </header>
+
+        <!-- Navegação -->
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="produto.html">PRODUTOS</a></li>
+                <li><a href="contato.html">CONTATO</a></li>
+                <li><a href="faq_section.html">SAC</a></li>
+                <li><a href="galeria.html">GALERIA</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="agendamento.html">AGENDAR</a></li>
+                <li><a href="calculadora.html">CALCULADORA</a></li>
+                <li><a href="mapa.html">LOCALIZAÇÃO</a></li>
+            </ul>
+        </nav>
+        <section class="faq-section">
+            <h2 class="titulo-centralizado">Perguntas Frequentes</h2>
+
+            <div class="faq-container">
+                <!-- Pergunta 1 -->
+                <div class="faq-item">
+                    <input type="checkbox" id="faq1" class="faq-toggle" />
+                    <label for="faq1" class="faq-pergunta">
+                        <span>Quais são os horários de atendimento?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M12 5v14M5 12h14"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                            />
+                        </svg>
+                    </label>
+                    <div class="faq-resposta">
+                        <p>Atendemos:</p>
+                        <p>segunda a sexta das 8h às 18h</p>
+                        <p>Nos demais dias e horarios Plantão</p>
+                    </div>
+                </div>
+
+                <!-- Pergunta 2 -->
+                <div class="faq-item">
+                    <input type="checkbox" id="faq2" class="faq-toggle" />
+                    <label for="faq2" class="faq-pergunta">
+                        <span>Quais formas de pagamento são aceitas?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M12 5v14M5 12h14"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                            />
+                        </svg>
+                    </label>
+                    <div class="faq-resposta">
+                        <p>Aceitamos:</p>
+                        <p>* Dinheiro;</p>
+                        <p>* Pix;</p>
+                        <p>* Cartões de Débito;</p>
+                        <p>* e Cartões de crédito;</p>
+                    </div>
+                </div>
+
+                <!-- Pergunta 3 -->
+                <div class="faq-item">
+                    <input type="checkbox" id="faq3" class="faq-toggle" />
+                    <label for="faq3" class="faq-pergunta">
+                        <span>É necessário agendamento prévio?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M12 5v14M5 12h14"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                            />
+                        </svg>
+                    </label>
+                    <div class="faq-resposta">
+                        <p>
+                            Recomendamos agendamento para garantir o melhor
+                            atendimento.
+                        </p>
+                        <p>
+                            Urgência e Emergencia sob demanda e prioridade por
+                            grau de risco.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pergunta 4 -->
+                <div class="faq-item">
+                    <input type="checkbox" id="faq4" class="faq-toggle" />
+                    <label for="faq4" class="faq-pergunta">
+                        <span>Vocês oferecem Retorno Gratuito?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24">
+                            <path
+                                d="M12 5v14M5 12h14"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                            />
+                        </svg>
+                    </label>
+                    <div class="faq-resposta">
+                        <p>
+                            Sim! Pronto Socorro se houver intercorrencia até 24
+                            horas contados após o atendimento!
+                        </p>
+                        <p>
+                            Sim! Atendimento Ambulatorial referente ao mesmo
+                            motivo do atendimento até 15 dias!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE DEPOIMENTOS COM CARDS ROTATIVOS -->
+        <section class="depoimentos">
+            <h2 class="titulo-centralizado">O que nossos clientes dizem</h2>
+
+            <div class="depoimentos-container">
+                <input type="radio" name="depoimento" id="dep1" checked />
+                <input type="radio" name="depoimento" id="dep2" />
+                <input type="radio" name="depoimento" id="dep3" />
+
+                <div class="depoimentos-cards">
+                    <!-- Card 1 -->
+                    <div class="depoimento-card">
+                        <div class="aspas">"</div>
+                        <p class="depoimento-texto">
+                            Excelente atendimento! Superou minhas expectativas!
+                        </p>
+                        <div class="depoimento-autor">
+                            <img
+                                src="assets/MariaClaraFonseca.png"
+                                alt="Maria"
+                            />
+                            <div>
+                                <h4>Maria Clara Fonseca</h4>
+                                <span>Aposentada / Do lar</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="depoimento-card">
+                        <div class="aspas">"</div>
+                        <p class="depoimento-texto">
+                            Serviço impecável! Recomendo a todos que buscam
+                            qualidade e bom atendimento.
+                        </p>
+                        <div class="depoimento-autor">
+                            <img
+                                src="assets/GabrielCordeiro.png"
+                                alt="Gabriel"
+                            />
+                            <div>
+                                <h4>Gabriel Cordeiro</h4>
+                                <span>Academico de Veterinaria</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="depoimento-card">
+                        <div class="aspas">"</div>
+                        <p class="depoimento-texto">
+                            Melhor escolha que fiz! Produtos de qualidade e
+                            preço justo.
+                        </p>
+                        <div class="depoimento-autor">
+                            <img src="assets/AntoniaSilva.png" alt="Antonia" />
+                            <div>
+                                <h4>Antonia Silva</h4>
+                                <span>Empresaria / Mutante Academia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Indicadores -->
+                <div class="depoimentos-nav">
+                    <label for="dep1" class="nav-dot"></label>
+                    <label for="dep2" class="nav-dot"></label>
+                    <label for="dep3" class="nav-dot"></label>
+                </div>
+            </div>
+        </section>
+        <script src="dark_mode.js"></script>
+        <script src="chat_bot.js"></script>
+        <script src="analytics_setup.js"></script>
+    </body>
+</html>
